@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req,res){
 	var interfaces = os.networkInterfaces();
-	res.render("index", {interfaces: interfaces});
+	res.render("index", {interfaces: interfaces, user: process.env.USER } );
 });
 
 app.get("/sample", function(req,res){
@@ -79,7 +79,7 @@ app.get("/video/*", function(req,res){
 	// A resize mechanism can be used
 	new Transcoder(stream)
         .videoCodec('libx264')
-        .audioCodec("libvo_aacenc")
+        .audioCodec("libfaac")
         .sampleRate(44100)
         .channels(2)
         .audioBitrate(128 * 1000)

@@ -10,21 +10,21 @@ Requirements
 2. 	Chrome Browser version 32 or later
 3. 	Cast extension in Chrome Store
 4. 	NodeJS v0.10+
-5. 	FFMpeg installed and reachable in PATH ([Windows guide](http://www.wikihow.com/Install-FFmpeg-on-Windows)) 
+5. 	FFMpeg installed and reachable in PATH (use brew)
 6.	A fast enough home interconnection network
 
 How to install & use
 ====================
 
-* 	On a terminal, do the following:
+* 	In Terminal, do the following:
 
 ```
-
-$ git clone git@github.com:mustafaakin/cast-localvideo.git
+$ brew install ffmpeg
+$ brew install node # must 0.10 at least
+$ git clone git@github.com:dragonfax/cast-localvideo.git
 $ cd cast-localvideo
 $ npm install
 $ node app
-
 ```
 
 * On your Chrome, go to address [http://localhost:8000](http://localhost:8000). You will see your folders (just change the folder to `/` on Linux & Mac. There is no root concept in Windows as it is in Unix, if you wish to use another drive, just use `D:` 
@@ -38,7 +38,7 @@ $ node app
 Note
 ====
 
-I developed this on Windows, on my parents computer remotely via TeamViewer. It is not feature complete, but it is easy to add features. Any pull requests & forks are welcome.  
+Forked and fixed on Mavericks OSX.
 
 TODOs
 =====
@@ -51,5 +51,5 @@ TODOs
 6.	Resize the videos if they are too big.
 7.	Options to change encoding options.
 
-### Contact
-Concatct *mustafa91* at *gmail* for any questions. And this is [my website](http://mustafaak.in)
+### Original Author (Windows version)
+*mustafa91* at *gmail* . [website](http://mustafaak.in)

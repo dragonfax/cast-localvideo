@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req,res){
 	var interfaces = os.networkInterfaces();
-	res.render("index", {interfaces: interfaces});
+	res.render("index", {interfaces: interfaces, user: process.env.USER } );
 });
 
 app.get("/sample", function(req,res){

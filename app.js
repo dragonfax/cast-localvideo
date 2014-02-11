@@ -79,7 +79,7 @@ app.get("/video/*", function(req,res){
 	// A resize mechanism can be used
 	new Transcoder(stream)
         .videoCodec('libx264')
-        .audioCodec("libvo_aacenc")
+        .audioCodec("libfaac")
         .sampleRate(44100)
         .channels(2)
         .audioBitrate(128 * 1000)
